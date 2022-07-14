@@ -124,7 +124,6 @@ body {
   width: 30px;
   height: auto;
   display: block;
-  margin-right: 10px;
 }
 
 .actividad-description .list-car li p{
@@ -664,7 +663,7 @@ body {
 
 @media screen and (max-width:580px){
   .actividad-description .list-car li{
-    width: 33.3%;
+    width: 20%;
     margin: 5px 0;
     justify-content: flex-start;
   }
