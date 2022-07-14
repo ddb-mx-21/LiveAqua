@@ -1,0 +1,681 @@
+:root{
+  --color-blue: #35819b;
+  --color-gray: #818181;
+  --color-gray-text: #636363;
+  --color-morado: #5f6db3;
+  --color-gray: #4c4c4c;
+  --border-gray: #9b9b9b;
+  --border-black: #000;
+  --main-padding: 0 4%;
+}
+
+body {
+	font-family: 'HelveticaNeueCondensed', sans-serif !important;
+}
+
+#actividades{
+  padding: var(--main-padding);
+  background: #f7f6fb;
+  margin-top: 2%; 
+}
+.mt-2 {
+  margin-top: -3.5% !important; 
+  padding-top: 80px !important;
+}
+.actividades-content {
+    position: relative;
+    display: table;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.actividades-section{
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.actividades-section h2{
+  color: var(--color-gray);
+  font-size: 1.2em;
+}
+
+.actividades-wrapper{
+  margin-top: 0;
+  padding: 0;
+  position: relative;
+}
+
+.actividades-item{
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  margin: 0;
+  background: #fff;
+  margin-bottom: 40px;
+  padding-bottom: 50px;
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(191,191,191,1);
+  -moz-box-shadow: 5px 5px 10px 0px rgba(191,191,191,1);
+  box-shadow: 5px 5px 10px 0px rgba(191,191,191,1);
+}
+
+/*
+.actividades-item.seleccionando .actividad-price .select-actividad{
+  background: #606060;
+}*/
+
+.actividad-image{
+  width: 25%;
+  display: flex;
+  position: relative;
+  border-right: none;
+  padding: 20px;
+  justify-content: center;
+}
+
+.actividad-image img{
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 300px;
+  align-self: center;
+}
+
+.image-car-mobile{
+  width: 100%;
+  height: auto;
+  display: none;
+  max-width: 300px;
+  align-self: center;
+}
+
+.actividad-description{
+  width: 50%;
+  border-right: none;
+  padding: 25px;
+  position: relative;
+}
+
+.actividad-description h3{
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--color-gray);
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.actividad-description .list-car{
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.actividad-description .list-car li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.actividad-description .list-car li img{
+  width: 30px;
+  height: auto;
+  display: block;
+  margin-right: 10px;
+}
+
+.actividad-description .list-car li p{
+  text-align: left;
+  color: var(--color-gray);
+  font-weight: 500;
+}
+
+.actividad-description .list-features{
+  display: flex;
+  flex-flow: column;
+  margin: 30px 0 0 0;
+  padding: 0;
+}
+
+.actividad-description .list-features li{
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.actividad-description .list-features li img{
+  width: 20px;
+  height: 20px !important;
+  height: auto;
+  display: block;
+  margin-right: 5px;
+}
+
+.actividad-description .list-features li p{
+  text-align: left;
+  color: var(--color-gray-text);
+  font-weight: 400;
+}
+.actividad-description a.detalle-actividad{
+  display: flex;
+  text-align: left;
+  margin: 15px 0;
+  position: relative;
+  color: var(--color-blue);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.actividad-price{
+  width: 25%;
+  padding-top: 15px;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.actividad-price p{
+  text-align: left;
+  color: var(--color-gray);
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.actividad-price p:first-child{
+  font-size: 1.8em;
+  margin: 10px 0 10px 0;
+}
+
+.actividad-price p.price-socio{
+  font-weight: 900;
+  color: var(--color-gray);
+  font-size: 2em;
+}
+
+.actividad-price .select-actividad{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  height: 60px;
+  background: var(--color-morado);
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.actividad-price .select-actividad span{
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.actividad-price .select-actividad svg{
+  stroke: none;
+  fill: #fff;
+  transform: rotate(270deg);
+  width: 20px;
+  height: 20px;
+  margin-left: 25px;
+}
+
+/*a.seleccionando .actividad-price .select-actividad svg{
+  transform: rotate(180deg);
+}*/
+
+.actividad-desglose{
+  width: auto;
+  border-top: none;
+  display: none;
+  transition: none;
+  
+  position: absolute;
+  right: 27%;
+  top: -60px;
+  border: 1px solid var(--color-gray);
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(191,191,191,0.8);
+  -moz-box-shadow: 5px 5px 10px 0px rgba(191,191,191,0.8);
+  box-shadow: 5px 5px 10px 0px rgba(191,191,191,0.8);
+}
+
+.actividad-desglose .actividad-desglose__item{
+  display: flex;
+  flex-flow: wrap;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 20px;
+}
+
+.actividad-detalles{
+  display: table;
+  width: 100%;
+}
+
+.actvidad-detalles__child{
+  float: left;
+  display: table;
+  position: relative;
+}
+
+.actvidad-detalles__child:last-child{
+  padding: 0 0 0 0px;
+  width: 100%;
+}
+
+.actvidad-detalles__child h3{
+  text-align: left;
+  color: var(--color-gray);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.actvidad-detalles__child p.car-name{
+  text-align: left;
+  font-weight: bold;
+  color: var(--color-gray);
+  margin: 0;
+  padding: 0;
+}
+
+.actvidad-detalles__child p{
+  text-align: left;
+  font-size: 1em;
+  color: var(--color-gray);
+  margin: 15px 0;
+  font-weight: 100;
+}
+
+.actvidad-detalles__child ul{
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.actvidad-detalles__child ul li{
+  display: block;
+  text-align: left;
+  color: var(--color-gray-text);
+  font-weight: 300;
+  padding-left: 25px;
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 16px;
+  position: relative;
+}
+
+.actvidad-detalles__child ul li::before{
+ 	content: '\2713';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: 0px;
+	left: 3px;
+	margin: auto;
+	color: var(--color-blue);
+	font-size: 18px;
+}
+
+.complement-info{
+  display: table;
+  width: 100%;
+  margin-top: 25px;
+  padding: 0 50px;
+  position: relative;
+}
+
+.complement-info .terminos-condiciones{
+  margin: 0 0 25px 0;
+  position: relative;
+  text-align: left;
+  color: var(--color-gray);
+  font-size: 0.8em;
+  font-weight: 100;
+}
+
+.complement-info .terminos-condiciones h4{
+  font-size: 1.2em;
+  color: var(--color-blue);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.complement-info .reservar-auto{
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+  display: table;
+}
+.complement-info .reservar-auto a.btn-form.btn-auto{
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  width: 300px;
+}
+
+.complement-info .reservar-auto a.btn-form.btn-auto::before{
+  border-radius: 25px;
+}
+
+.complement-info .reservar-auto a.btn-form.btn-auto span{
+  font-weight: bold;
+}
+
+.complement-info .reservar-auto a.btn-form.btn-auto svg{
+  margin-left: 15px;
+  fill: #fff;
+  width: 15px;
+  height: 15px;
+  z-index: 2;
+}
+
+
+/* Start Custome Renta Autos 2022 */
+
+.text-header-favc h1 {
+  font-size: 3em;
+  font-family: 'Trajan Pro';
+  color: var(--color-morado);
+  text-align: left;
+  font-weight: 800;
+}
+.text-header-favc {
+  padding: 80px 4% 0px !important;
+}
+.p80-0 {
+  padding: 80px 4% 80px !important;
+}
+.bg-gray {
+	background: #f5f5f5 !important;
+}
+.reveal {
+  position: relative;
+  transform: translateY(80px);
+  opacity: 1;
+  transition: 1s all ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.similar {
+	color: var(--color-gray-text);
+	font-size: 15px;
+	font-weight: 400;
+}
+.list-car img {
+	padding: 5px;
+}
+.p-bullet {
+	content: "\2022";
+	margin-right: 10px;
+	width: 12px;
+	height: 12px;
+	background: var(--color-morado);
+	border-radius: 20px;
+}
+.actividad-price p.price-socio span{
+  font-weight: 500;
+  color: var(--color-black);
+  font-size: 15px;
+}
+.detalle-actividad {
+	color: var(--color-blue);
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+.detalle-actividad:hover{
+	color: var(--color-morado) !important;
+}
+
+.line_::before{
+  content: '____';
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  margin: auto;
+}
+.lines_::before{
+  content: '____';
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  margin: auto;
+}
+.incluye {
+	color: var(--color-morado) !important;
+	font-size: 16px !important;
+	font-weight: 700 !important;
+	margin-bottom: 20px !important;
+}
+.detalle-actividad:active {
+  color: var(--color-blue);
+}
+.detalle-actividad::selection {
+  color: var(--color-blue);
+}
+
+.actividad-desglose:after {
+    content: '';
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 15px solid black;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: var(--color-gray);
+    clear: both;
+}
+.btn_mobile {
+	display: none;
+}
+.btn_desktop {
+	display: block;
+}
+.header-image img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.footer-image img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+/* End Custome Renta Autos 2022 */
+
+
+@media screen and (max-width:1280px){
+  .actividad-price .select-actividad span{
+    font-size: 18px;
+  }
+  .actividad-price .select-actividad svg{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width:1040px){
+  .actividad-price .select-actividad span{
+    font-size: 16px;
+  }
+  .actividad-price .select-actividad svg{
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+  }
+  .actividad-description h3{
+    font-size: 1.6em;
+  }
+  .actvidad-detalles__child:first-child, .actvidad-detalles__child:last-child{
+    width: 100%;
+    padding: 0 15px;
+  }
+  .complement-info{
+    padding: 0 35px;
+  }
+}
+
+@media screen and (max-width:768px){
+  .actividades-content{
+    padding: 0;
+  }
+  .actividades-item{
+    margin: 25px 0;
+    padding-bottom: 20px;
+  }
+  .actividades-wrapper{
+    margin-top: 25px;
+  }
+  .actividad-description{
+    padding: 20px;
+  }
+  .actividad-description, .actividad-price{
+    width: 100%;
+  }
+  .actividad-image{
+    display: none;
+  }
+  .actividad-description{
+    border-right: 1px solid #C4C4C4;
+    border-bottom: none;
+  }
+  .actividad-price{
+    border-top: none;
+  }
+  .actividad-price p{
+    margin: 5px 0;
+  }
+  .actividad-price .select-actividad{
+    margin-top: 0px;
+  }
+  .image-car-mobile{
+    display: block;
+    margin: 0 auto 25px;
+    max-width: 200px;
+  }
+  .actividad-description .list-features li{
+    margin: 5px 0;
+  }
+  .actividad-description .list-features{
+    margin: 10px 0 0 0;
+  }
+  .actividad-price p:first-child{
+    margin: 10px 0 10px 0;
+  }
+  .actvidad-detalles__child:first-child, .actvidad-detalles__child:last-child{
+    width: 100%;
+  }
+  .complement-info{
+    padding: 0 10px;
+    margin-top: 10px;
+  }
+  .actvidad-detalles__child:first-child{
+    padding: 20px;
+    border: 1px solid var(--color-gray);
+    border-radius: 10px;
+  }
+  .actvidad-detalles__child:first-child::after {
+    display: none;
+  }
+  .complement-info .terminos-condiciones{
+    margin: 0 0 35px 0;
+  }
+  .complement-info .reservar-auto a.btn-form.btn-auto{
+    float: inherit;
+    width: 100%;
+  }
+  .actividad-description a.detalle-actividad{
+    justify-content: center;
+  }
+  .actividad-price {
+	    padding: 20px;
+  }
+  .line_::before {
+	  content: '______';
+	  left: 60px;
+	  top: 83px;
+  }
+  .line_::after{
+	  content: '______';
+	  position: absolute;
+	  top: 83px;
+	  right: 60px;
+	  margin: auto;
+	}
+	
+	 .lines_::before {
+	  content: '______';
+	  left: 45px;
+	  top: 83px;
+  }
+  .lines_::after{
+	  content: '______';
+	  position: absolute;
+	  top: 83px;
+	  right: 45px;
+	  margin: auto;
+	}
+   .detalle-actividad {
+	   text-align: center;
+	   margin-left: 0 !important;
+   }
+	.actividad-desglose{
+	  position: relative !important;
+	  width: 100% !important;
+	  right: 0px;
+	  top: 0px;
+	  border: none !important;
+	  background: #fff;
+      -webkit-box-shadow: none !important;
+	  -moz-box-shadow: none !important;
+	  box-shadow: none !important;
+	}
+	.actividad-desglose::after {
+		position: relative !important;
+		border: none !important;
+	}
+	.btn_mobile {
+		display: block !important;
+	}
+	.btn_desktop {
+		display: none !important;
+	}
+
+}
+
+@media screen and (max-width:580px){
+  .actividad-description .list-car li{
+    width: 33.3%;
+    margin: 5px 0;
+    justify-content: flex-start;
+  }
+  .actividad-price .select-actividad {
+	  width: 100%;
+  }
+}
+
+@media screen and (max-width:380px){
+  .actividad-description .list-car{
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+}
